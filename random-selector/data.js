@@ -1,5 +1,11 @@
 let images=[
-    "https://resources.matcha-jp.com/resize/720x2000/2018/05/24-54841.jpeg",
-    "https://d3l76hx23vw40a.cloudfront.net/recipe/yqn41-006.jpg",
-    "https://tshop.r10s.com/3fa/984/109e/9fc5/50b4/dded/93c4/1172e89b632c600c73735e.jpg?_ex=460x460"
+    "https://www.discoverhongkong.com/content/dam/dhk/intl/explore/iconic-hong-kong-experiences/horse-racing-4-3.jpg",
+    "https://www.discoverhongkong.com/content/dam/dhk/intl/explore/iconic-hong-kong-experiences/bar-districts-4-3.jpg",
+    "https://www.discoverhongkong.com/content/dam/dhk/intl/explore/shopping/iconic-street-market/stanley-market-4-3.jpg"
 ];
+
+let place=[
+    ["香港賽馬會沙田馬場","22.4019852986155,114.2064870725922"],
+    ["香港中環蘭桂坊","22.2809774,114.1556356"],
+    ["赤柱市集","22.2179047,114.2120307"]
+]

@@ -7,16 +7,16 @@ $(document).ready(function(){
     ctx = $("#myCanvas")[0].getContext("2d");
 
     imgMain = new Image();
-    imgMain.src = "images/spriteSheet.png";
+    imgMain.src = "rpg/images/spriteSheet.png";
     currentImgMainX = 0;
     currentImgMainY = 0;
     imgMain.onload = function(){
         ctx.drawImage(imgMain,0,0,80,130,currentImgMainX,currentImgMainY,200,200);
     };
     imgMountain = new Image();
-    imgMountain.src = "images/material.png";
+    imgMountain.src = "rpg/images/material.png";
     imgEnemy = new Image();
-    imgEnemy.src = "images/Enemy.png";
+    imgEnemy.src = "rpg/images/Enemy.png";
     imgMountain.onload = function(){
         imgEnemy.onload = function(){
             for(let x in mapArray){
@@ -35,8 +35,7 @@ $(document).keydown(function(event){
     let targetImgMainX, targetImgMainY, targetBlock, cutImagePositionX;
     event.preventDefault();
 
-    //console.log(event.code);
-    switch(event.code){
+    switch(event.key){
         case "ArrowLeft":
             targetImgMainX = currentImgMainX - 200;
             targetImgMainY = currentImgMainY;

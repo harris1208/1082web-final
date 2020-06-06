@@ -9,6 +9,7 @@ body {
 }
 
 
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -89,3 +90,9 @@ body {
     margin-top: 7rem;
   }
 }
+
+.fb-share-button{
+  top: -2px;
+  margin: 10px;
+}
+

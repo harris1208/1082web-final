@@ -52,6 +52,6 @@ function onPlayerStateChange(event){
         }
     }
     if(player.getVideoLoadedFraction()>0){
-        $("h2").text(playet.getVideoData().title);
+        $("h2").text(player.getVideoData().title);
     }
 }

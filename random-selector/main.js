@@ -1,17 +1,19 @@
-/*
-window.onload=function(){
-    //document.write("Hello JavaScript!");
-};
-*/
-
+let randomChildNumber;
 $(document).ready(function(){
+    $("#a").hide();
     $("input").click(function(){
-        //alert("Test");
-        //$("H1").text("Hello");
+        $("#map").attr("src","");
+    $("#real").attr("src","");
         let numberOfListItem = $("#choices li").length;
-        let randomChildNumber = Math.floor(Math.random()*numberOfListItem);
-        $("#random-result").text($("#choices li").eq(randomChildNumber).text());
-        //document.getElementById('image').src = images[randomChildNumber];
-        $("#random-pic").attr("src",images[randomChildNumber])
+        randomChildNumber = Math.floor(Math.random()*numberOfListItem);
+        $("H1").text($("#choices li").eq(randomChildNumber).text());
+        $("img").attr("src",images[randomChildNumber])
+        $("a").show();
     });
 });
+
+function showmap(){
+    $("#a").hide();
+    $("#map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyDNI-3B-xYwMU0GOVvieXsfy8LU8sIUZ_s&q="+place[randomChildNumber][0]);
+    $("#real").attr("src","https://www.google.com/maps/embed/v1/streetview?key=AIzaSyDNI-3B-xYwMU0GOVvieXsfy8LU8sIUZ_s&location="+place[randomChildNumber][1]+"&heading=60&pitch=30&fov=90");
+}

@@ -1,11 +1,6 @@
-/*
-window.onload=function(){
-    //document.write("Hello JavaScript!");
-};
-*/
-
 $(document).ready(function(){
     let currentQuiz = null;
+    let score = 0;
     $("#startButton").click(function(){
         if(currentQuiz==null){
             //顯示第一個題目
@@ -26,18 +21,28 @@ $(document).ready(function(){
             $.each(
                 $(":radio"),function(i,val){
                     if(val.checked){
-                        //是否下一個就已是最終成果(A~D)
-                        if(isNaN(questions[currentQuiz].answers[i][1])){
-                            //最終成果
-                            let finalResult = questions[currentQuiz].answers[i][1];
-                            $("#question").text(finalAnswers[finalResult][0]);
-                            $("#options").empty();
-                            $("#options").append(finalAnswers[finalResult][1]+"<br><br>");
+                        let ans = $("input[name='options']:checked").val();
+                        if(questions[currentQuiz].answers[ans][1]==1){score++;}
+                        if(currentQuiz==questions.length-1){
+                             $("#question").text("你的分數是"+score+"/10分");
+                                $("#options").empty();
+                            if(score==10){
+                                $("#options").append(finalAnswers[0]+"<br><br>");
+                            }
+                            else if(score>8){
+                                $("#options").append(finalAnswers[1]+"<br><br>");
+                            }
+                            else if(score>6){
+                                $("#options").append(finalAnswers[2]+"<br><br>");
+                            }
+                            else{
+                                $("#options").append(finalAnswers[3]+"<br><br>");
+                            }
                             currentQuiz=null;
                             $("#startButton").attr("value","Restart");
-                        }else{
-                            //還在選擇
-                            currentQuiz = questions[currentQuiz].answers[i][1]-1;
+                        }
+                        else{
+                            currentQuiz++;
                             $("#question").text(questions[currentQuiz].question);
                             $("#options").empty();
                             for(let x=0;x<questions[currentQuiz].answers.length;x++){

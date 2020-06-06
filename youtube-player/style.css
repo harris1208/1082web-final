@@ -1,6 +1,10 @@
 body{
     text-align: center;
+    font-weight: bold;
 }
 h2{
-    height: 32px;
+    height: 30px;
+}
+a{
+    font-weight: lighter;
 }
