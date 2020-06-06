@@ -6,6 +6,11 @@ $(document).ready(function(){
     );
 
     $("#date-button").click(function(){
+        $("#courseTable").empty();
+
+    $("#courseTable").append(
+        "<tr><th>日期</th><th>假期</th></tr>"
+    );
         let StartDate = $("#StartDate").val();
         let EndDate = $("#EndDate").val();
         if(StartDate==""){
