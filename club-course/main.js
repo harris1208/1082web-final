@@ -10,7 +10,7 @@ $(document).ready(function(){
         $("#courseTable").append(
             "<tr><th>日期</th><th>假期</th></tr>"
         );
-        x=0;
+        x = 0;
         let StartDate = $("#StartDate").val();
         let EndDate = $("#EndDate").val();
         if(StartDate==""){
