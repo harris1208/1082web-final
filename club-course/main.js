@@ -34,6 +34,8 @@ $(document).ready(function(){
             setMonthAndDay(splitText[1],splitText[2],2);
             setTable(); 
         }
+        StartDate="";
+        EndDate="";
     });
 });
 
